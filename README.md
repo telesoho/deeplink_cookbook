@@ -14,3 +14,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+使用Keytool取得APK文件的指纹
+
+```powershell
+ C:\Program Files\Android\Android Studio\jre\bin>  .\keytool.exe -printcert -jarfile "C:\telesoho\prjs\deeplink_cookbook\build\app\outputs\apk\debug\app-debug.apk"
+```

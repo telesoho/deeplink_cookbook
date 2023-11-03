@@ -25,13 +25,21 @@
             </intent-filter>
             <!-- Enable deeplink -->
             <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
-            <!-- Set deeplink domain -->
+            <!-- Set deeplink for http://telesoho.github.io/deeplink_cookbook -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" android:host="blog.telesoho.com" />
                 <data android:scheme="https" />
+                <data android:scheme="http" android:host="telesoho.github.io" 
+                    android:pathPrefix="/deeplink_cookbook" />
+            </intent-filter> 
+            <!-- Set deeplink for telesoho://deeplink_cookbook -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="telesoho" android:host="deeplink_cookbook" />
             </intent-filter> 
         </activity>
         <!-- Don't delete the meta-data below.
